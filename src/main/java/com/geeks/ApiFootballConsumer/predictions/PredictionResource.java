@@ -18,7 +18,8 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/predictions")
 public class PredictionResource {
-    private static final String  PREDICTION_URL ="https://apiv2.apifootball.com/?action=get_predictions&from="+getStartDate()+"&to="+getEndDate()+"&APIkey="+Constants.API_KEY ;
+    private static final String  PREDICTION_URL =
+        "https://apiv2.apifootball.com/?action=get_predictions&from="+getStartDate()+"&to="+getEndDate()+"&APIkey="+Constants.API_KEY ;
 
     private static String getEndDate() {
         return  new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());
